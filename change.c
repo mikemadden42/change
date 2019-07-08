@@ -1,8 +1,4 @@
 // https://developer.gnome.org/glib/stable/glib-compiling.html
-// clang -Wall -Wextra -pedantic -std=c11 -O2 -march=native -o days days.c
-// $(pkg-config --cflags --libs glib-2.0) clang -Wall -Wextra -pedantic -std=c11
-// -O2 -march=native -o days days.c $(pkg-config --cflags --libs glib-2.0)
-// -fsanitize=address
 
 #include <stdio.h>
 #include <time.h>
@@ -12,7 +8,7 @@
 int main() {
     GDate *start;
     GDate *end;
-    int days = 0;
+    size_t days = 0;
     time_t now;
 
     // Set the starting time.
@@ -26,7 +22,7 @@ int main() {
 
     // Find the difference in days.
     days = g_date_days_between(start, end);
-    printf("diff: %d days\n", days);
+    printf("diff: %ld days\n", days);
 
     g_date_free(start);
     g_date_free(end);
