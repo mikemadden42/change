@@ -12,7 +12,7 @@ int main() {
     time_t now;
 
     // Set the starting time.
-    start = g_date_new_dmy(8, 4, 2019);
+    start = g_date_new_dmy(6, 7, 2020);
 
     // Get the current time.
     time(&now);
