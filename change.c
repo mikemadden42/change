@@ -8,7 +8,7 @@
 int main() {
     GDate *start;
     GDate *end;
-    size_t days = 0;
+    size_t days;
     time_t now;
 
     // Set the starting time.

@@ -57,3 +57,8 @@ build
 
 # vscode
 .vscode
+
+# clion
+.idea/
+cmake-build-debug/
+cmake-build-release/
