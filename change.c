@@ -1,11 +1,10 @@
 // https://developer.gnome.org/glib/stable/glib-compiling.html
 
+#include <glib.h>
 #include <stdio.h>
 #include <time.h>
 
-#include <glib.h>
-
-int main() {
+int main(void) {
     GDate *start;
     GDate *end;
     size_t days;
